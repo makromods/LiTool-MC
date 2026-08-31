@@ -1,15 +1,13 @@
-⚡ LiTool MC
+# ⚡ LiTool MC
 
 Minecraft Plugin Development Toolkit for Termux.
 
-🚀 Installation
+## 🚀 Installation
 
 Run this command in Termux:
 
-''' curl -fsSL https://raw.githubusercontent.com/makromods/LiTool-MC/main/install.sh | bash
+```bash
+curl -fsSL https://raw.githubusercontent.com/makromods/LiTool-MC/main/install.sh | bash
 
-▶️ Run
-
-Run this command in Termux:
-
-litool
+▶️ Run LiTool MC
+```litool
