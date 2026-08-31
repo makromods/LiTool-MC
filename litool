@@ -1,0 +1,51 @@
+#!/data/data/com.termux/files/usr/bin/bash
+APP="$HOME/litool-mc"
+TOOLS="$APP/tools"
+mkdir -p "$HOME/LiToolProjects"
+
+pause(){ echo; read -p "Press Enter to continue..."; }
+while true; do
+clear
+cat <<'EOF'
+╔══════════════════════════════════════════╗
+║             ⚡ LiTool MC                 ║
+║       Minecraft Plugin Toolkit           ║
+╠══════════════════════════════════════════╣
+║  1. Install / Setup Dev Packages         ║
+║  2. Create Plugin Project                ║
+║  3. Build Plugin (.jar)                  ║
+║  4. Create Command                       ║
+║  5. Create Listener                      ║
+║  6. Generate plugin.yml                  ║
+║  7. Generate config.yml                  ║
+║  8. Generate Java Class                  ║
+║  9. Plugin Templates                     ║
+║ 10. Install Plugin to Server             ║
+║ 11. Project Manager                     ║
+║ 12. Server Tools                         ║
+║ 13. Check Environment                    ║
+║ 14. Update LiTool MC                     ║
+║  0. Exit                                 ║
+╚══════════════════════════════════════════╝
+EOF
+echo
+read -p "Select option: " n
+case "$n" in
+1) bash "$TOOLS/setup.sh"; pause;;
+2) bash "$TOOLS/create_project.sh"; pause;;
+3) bash "$TOOLS/build.sh"; pause;;
+4) bash "$TOOLS/command.sh"; pause;;
+5) bash "$TOOLS/listener.sh"; pause;;
+6) bash "$TOOLS/plugin_yml.sh"; pause;;
+7) bash "$TOOLS/config.sh"; pause;;
+8) bash "$TOOLS/java_class.sh"; pause;;
+9) bash "$TOOLS/templates.sh"; pause;;
+10) bash "$TOOLS/install_server.sh"; pause;;
+11) bash "$TOOLS/project_manager.sh"; pause;;
+12) bash "$TOOLS/server.sh"; pause;;
+13) bash "$TOOLS/check.sh"; pause;;
+14) echo "Update support can be connected to a Git repository later."; pause;;
+0) exit 0;;
+*) echo "Invalid option."; sleep 1;;
+esac
+done
