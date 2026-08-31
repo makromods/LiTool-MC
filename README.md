@@ -1,16 +1,10 @@
-# LiTool MC
+# ⚡ LiTool MC
 
-Termux-friendly Minecraft Paper plugin development toolbox.
+Minecraft Plugin Development Toolkit for Termux.
 
-## Install
+## 🚀 Installation
+
+Run this command in Termux:
 
 ```bash
-unzip LiTool-MC.zip
-cp -r LiTool-MC ~/litool-mc
-chmod +x ~/litool-mc/litool ~/litool-mc/tools/*.sh
-mkdir -p $PREFIX/bin
-ln -sf ~/litool-mc/litool $PREFIX/bin/litool
-litool
-```
-
-Run option 1 first to install the development environment.
+curl -fsSL https://raw.githubusercontent.com/makromods/LiTool-MC/main/install.sh | bash
